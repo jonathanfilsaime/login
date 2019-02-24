@@ -18,22 +18,27 @@ class FacebookAuth extends Component {
 
     responseFacebook = (response) => {
         console.log(response)
+        this.setState({isLoggedIn: true})
     }
 
     render() {
         let fbContent;
 
-
+        console.log("is log in ", this.state.isLoggedIn)
 
         if(this.state.isLoggedIn)
         {
-            fbContent = null;
+            fbContent = (
+                <button className="ui blue facebook button">
+                    Sign out
+                </button>
+            );
         }
         else
         {
             fbContent = (
                 <FacebookLogin
-                    appId="****************"
+                    appId="339754106747665"
                     autoLoad={true}
                     fields="name,email,picture"
                     cssClass="ui blue button"

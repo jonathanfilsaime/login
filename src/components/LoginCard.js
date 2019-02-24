@@ -1,6 +1,7 @@
 import React from 'react';
 import GoogleAuth from "./GoogleAuth";
-import FacebookAuth from "./FacebookAuth"
+import FacebookAuth from "./FacebookAuth";
+import FacebookButton from './react-social-login/FacebookButton'
 import './LoginCard.css'
 
 
@@ -20,7 +21,8 @@ class LoginCard extends React.Component{
                       </h2>
                       <GoogleAuth/>
                       <br/>
-                      <FacebookAuth/>
+                      {/*<FacebookAuth/>*/}
+                      <FacebookButton/>
                   </div>
               </div>
           </div>
